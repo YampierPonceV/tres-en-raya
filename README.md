@@ -2,6 +2,8 @@
 
 ---
 
+Link del demo [ingresa aqui 👆](https://yampierponcev.github.io/tres-en-raya/)
+
 ### Captura del Juego 👇
 
 ![](/CAPTURA.png)
