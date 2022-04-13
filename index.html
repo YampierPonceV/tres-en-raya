@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JUEGO TRES EN RAYA</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      const oponente_name = prompt("INGRESA TU NOMBRE");
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">Juego Tres en Raya</h1>
+    </header>
+    <div class="players">
+      <div class="player" id="playerUno">
+        <p class="name" id="oponente_name"></p>
+      </div>
+      <div class="player" id="playerDos">
+        <p class="name">MAQUINA</p>
+      </div>
+    </div>
+    <main class="container">
+      <div class="verticalLine"></div>
+      <div class="verticalLine"></div>
+      <div class="horizontalLine"></div>
+      <div class="horizontalLine"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </main>
+    <div class="modalResult" id="modal">
+      <div class="close" id="close">X</div>
+      <div class="result" id="result"></div>
+    </div>
+    <div class="reset" id="reset">Reiniar Partida</div>
+    <script>
+      const oponente = document.getElementById("oponente_name");
+      oponente.innerHTML = oponente_name;
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>

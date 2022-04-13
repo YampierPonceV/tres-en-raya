@@ -1,0 +1,57 @@
+.modalResult {
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  height: 100vh;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.close {
+  background: var(--color1);
+  color: var(--color5);
+  font-size: 1.5em;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  right: 3%;
+  text-align: center;
+  top: 3%;
+  transition: all 0.3s ease;
+  width: 40px;
+}
+.close:hover {
+  color: var(--color6);
+  cursor: pointer;
+}
+
+.result {
+  align-items: center;
+  animation: modal 0.4s ease forwards;
+  background: var(--color5);
+  border-radius: 30px;
+  color: var(--color6);
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  height: var(--size1);
+  justify-content: center;
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: -webkit-calc(var(--size1) * 4);
+  width: calc(var(--size1) * 4);
+}
+
+@keyframes modal {
+  0% {
+    top: 15%;
+    opacity: 0;
+  }
+}

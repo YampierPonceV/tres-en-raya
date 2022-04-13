@@ -1,0 +1,47 @@
+.players {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 2.5em;
+  justify-content: space-between;
+  margin: 3em auto;
+  position: relative;
+  width: -webkit-calc(var(--size1) * 4);
+  width: calc(var(--size1) * 4);
+}
+
+.player {
+  background: var(--color5);
+  border-radius: 7px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #333;
+  display: flex;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 2.5em;
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    -webkit-box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 197px;
+}
+.player.actual {
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.15),
+    inset 0 -3px 0px var(--color2);
+}
+
+.name {
+  color: var(--color6);
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.turn {
+  color: var(--color1);
+  flex: 1;
+  font-size: 1.2em;
+  text-align: center;
+  visibility: hidden;
+}

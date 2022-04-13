@@ -1,0 +1,85 @@
+.container {
+  cursor: pointer;
+  position: relative;
+  width: -webkit-calc(var(--size1) * 3);
+  width: calc(var(--size1) * 3);
+  height: -webkit-calc(var(--size1) * 3);
+  height: calc(var(--size1) * 3);
+  margin: 3em auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.26),
+    -4px -4px 4px 0.2px rgba(0, 0, 0, 0.26),
+    4px 4px 4px 0.2px rgba(0, 0, 0, 0.26);
+  flex-wrap: wrap;
+  border-radius: 7px;
+}
+
+.verticalLine {
+  animation: vl 0.4s ease forwards;
+  background: var(--color3);
+  height: -webkit-calc(var(--size1) * 3);
+  height: calc(var(--size1) * 3);
+  position: absolute;
+  top: 50%;
+  transition: all 0.4s ease;
+  width: var(--size2);
+}
+
+@keyframes vl {
+  0% {
+    height: 0px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.verticalLine:nth-child(odd) {
+  left: -webkit-calc(var(--size1) - (var(--size2) / 2));
+  left: calc(var(--size1) - (var(--size2) / 2));
+}
+.verticalLine:nth-child(even) {
+  left: -webkit-calc((var(--size1) * 2) - (var(--size2) / 2));
+  left: calc((var(--size1) * 2) - (var(--size2) / 2));
+}
+
+.horizontalLine {
+  animation: hl 0.4s ease forwards;
+  background: var(--color3);
+  height: var(--size2);
+  left: 50%;
+  position: absolute;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  width: -webkit-calc(var(--size1) * 3);
+  width: calc(var(--size1) * 3);
+}
+
+@keyframes hl {
+  0% {
+    width: 0px;
+  }
+  100% {
+    left: 0;
+  }
+}
+.horizontalLine:nth-child(odd) {
+  top: -webkit-calc(var(--size1) - (var(--size2) / 2));
+  top: calc(var(--size1) - (var(--size2) / 2));
+}
+.horizontalLine:nth-child(even) {
+  top: -webkit-calc((var(--size1) * 2) - (var(--size2) / 2));
+  top: calc((var(--size1) * 2) - (var(--size2) / 2));
+}
+
+.cell {
+  font-size: 3em;
+  font-weight: 600;
+  height: var(--size1);
+  line-height: var(--size1);
+  text-align: center;
+  width: var(--size1);
+}
